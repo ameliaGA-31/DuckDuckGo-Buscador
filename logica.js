@@ -15,24 +15,41 @@ function myFunction(liHtml,index){
 }
 function ocultarRespuestas(liHtml,index){
 		let todasRespuestas= Array.from(liHtml.getElementsByTagName("p"));
+		let iconos=Array.from(liHtml.getElementsByClassName("icon"));
 		console.log("todas las respuestas", todasRespuestas[0]);
 		 	console.log("todasLasRespuesta", todasRespuestas);
-		 if(todasRespuestas[0] && todasRespuestas[0].classList.length==0 ){
+		 if(todasRespuestas[0] && todasRespuestas[0].classList.length==0 && iconos[0]){
 		 	todasRespuestas[0].classList.add("ocultarTexto");
+		 	iconos[0].classList.toggle("fa-chevron-circle-down");
 		 }
 	}
 function mostrarRespuesta(liHtml,index){
 	console.log("index", index); 
+
 	preguntaHtml.forEach(ocultarRespuestas);
 	let respuesta= Array.from(liHtml.getElementsByTagName("p"));
-		if(respuesta[0]){
+	let iconos=Array.from(liHtml.getElementsByClassName("icon"));
+		if(respuesta[0] && iconos[0]){
 			respuesta[0].classList.toggle("ocultarTexto");
+			iconos[0].classList.toggle("fa-chevron-circle-up");
 			//respuesta[0].setAttribute("class","mostrarTexto");
 		}
+
 	console.log("respuesta", respuesta);
 	//li.setAttribute("class", "mostrarTexto");
 	//let respuesta= preguntaHtml[index].getElementsByTagName("p");
 }
+
+let iconLi= document.getElementById("icon-down");
+iconLi.addEventListener("clic", e => cambioIcon (e));
+
+function cambioIcon(evento){
+	iconLi.classList.add("icon-up");
+}
+
+
+
+
 
 /*for(i=0; i<preguntaHtml.length; i++){
 	preguntaHtml[i].onclick = function (e){

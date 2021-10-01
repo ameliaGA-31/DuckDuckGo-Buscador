@@ -124,7 +124,7 @@
 	min-height: 335px;
 	box-sizing: border-box;
 	background: linear-gradient(0deg, rgba(88,183,146,1) 50%, rgba(28,28,28,1) 50%);
-	display: flex;
+	display: flex;   
 	justify-content: center;
 	margin-bottom: 100px;
 }
