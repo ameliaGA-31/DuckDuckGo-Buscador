@@ -30,9 +30,9 @@ Esto es una replicar el sitio de **Duckduckgo** desde cero.
 
 
 ## Resultado Replica
-![Imagen](./parte1.png)
-![Imagen](./parte2.png)
-![Imagen](./parte3.png)
+![Imagen](./assets/parte1.jpg)
+![Imagen](./assets/parte2.jpg)
+![Imagen](./assets/parte3.jpg)
 
 
 
